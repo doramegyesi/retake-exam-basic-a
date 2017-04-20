@@ -22,18 +22,16 @@ class WordCounter():
 
     def most_common_word(self, program, source):
         try:
-            source_file = open(source, mode='r')
+            source_file = open(source, "r")
             file_content = source_file.read()
-            self.total = []
-            count = 0
-            for word in file_content:
-                if word == word:
-                    count += 1
-            self.total.sort()
-            self.total.reverse()
-            source_file.close()
-            a = self.total[0]
-            return a
+            everything = file_content.split()
+            counter = dict()
+            for i in range(len(everything)):
+                if everything[i] not in counter:
+                    counter[everything[i]] = 1
+                else:
+                    counter[everything[i]] += 1
+            print(counter)
         except FileNotFoundError:
             print('No such file was found')
 
