@@ -8,7 +8,7 @@
 # We should be able to query the earliest published books.
 # We should be able to query the latest published books.
 # Bookself should have a method whitch give us information about the number of books,
-#the earliest and the latest released books, and the favourite author
+# the earliest and the latest released books, and the favourite author
 
 class Book():
     def __init__(self, author, title, release_year):
@@ -30,7 +30,8 @@ class BookShelf():
         self.list_of_books.append(bk.book)
 
     def remove_books(self):
-        pass
+        bk = Book()
+        self.list_of_books.remove(bk.book)
 
     def name_the_favourite_author(self):
         self.list_of_titles = []
