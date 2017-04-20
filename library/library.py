@@ -23,20 +23,38 @@ class Book():
 class BookShelf():
     def __init__(self):
         self.list_of_books = []
+        self.list_of_titles = []
 
     def add_books(self):
         pass
 
+    def remove_books(self):
+        pass
+
     def name_the_favourite_author(self):
-        list_of_titles = []
+        self.list_of_titles = []
         b = Book()
         if self.author == author:
-            list_of_titles += self.b.book
+            self.list_of_titles += self.b.book
         return list_of_titles
+
+    def earliest_publication(self):
+        for book in self.list_of_titles:
+            pass
+
+    def latest_publication(self):
+        for book in self.list_of_titles:
+            pass
+
+    def all_information(self):
+        self.total = len(self.list_of_titles)
+        print("You have " + str(self.total) + " books")
+
 
 book = Book("Sylvia Plath", "The Bell Jar", "1963")
 print(book)
 my_shelf = BookShelf()
+print(my_shelf.all_information())
 #print(my_shelf.books())
 # Should print out:
 # You have no books here.
