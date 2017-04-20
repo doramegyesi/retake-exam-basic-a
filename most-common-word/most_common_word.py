@@ -12,7 +12,10 @@ import sys
 class WordCounter():
     def __init__(self):
         self.args = sys.argv
+        self.command = sys.argv[1:]
         if len(self.args) == 1:
             print("No source provided")
         elif len(sys.argv) == 2 :
             print ('python most_common_word.py [source]')
+        elif len(self.command) == 3 and self.command[0] == 'python':
+                self.read_write(self.command[1], self.command[2])
