@@ -26,7 +26,8 @@ class BookShelf():
         self.list_of_titles = []
 
     def add_books(self):
-        pass
+        bk = Book()
+        self.list_of_books.append(bk.book)
 
     def remove_books(self):
         pass
@@ -38,9 +39,11 @@ class BookShelf():
             self.list_of_titles += self.b.book
         return list_of_titles
 
-    def earliest_publication(self):
-        for book in self.list_of_titles:
-            pass
+    #def earliest_publication(self):
+    #    earliest_date = list_of_release year
+    #    for date in list_of_numbers:
+    #        if earliest_date > date:
+    #            earliest_date = date
 
     def latest_publication(self):
         for book in self.list_of_titles:
@@ -54,6 +57,7 @@ class BookShelf():
 book = Book("Sylvia Plath", "The Bell Jar", "1963")
 print(book)
 my_shelf = BookShelf()
+my_shelf.add_books()
 print(my_shelf.all_information())
 #print(my_shelf.books())
 # Should print out:
