@@ -15,14 +15,28 @@ class Book():
         self.title = title
         self.author = author
         self.release_year = release_year
+        self.book = str(self.author) + ": " + str(self.title) + " (" + self.release_year + ")"
 
     def __repr__(self):
         return str(self.author) + ": " + str(self.title) + " (" + self.release_year + ")"
 
+class BookShelf():
+    def __init__(self):
+        self.list_of_books = []
+
+    def add_books(self):
+        pass
+
+    def name_the_favourite_author(self):
+        list_of_titles = []
+        b = Book()
+        if self.author == author:
+            list_of_titles += self.b.book
+        return list_of_titles
 
 book = Book("Sylvia Plath", "The Bell Jar", "1963")
 print(book)
-#my_shelf = BookShelf()
+my_shelf = BookShelf()
 #print(my_shelf.books())
 # Should print out:
 # You have no books here.
