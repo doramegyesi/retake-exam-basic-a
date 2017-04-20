@@ -47,4 +47,4 @@ class Foxi(Dog):
 my_foxi = Foxi()
 ```
 #### Your answer:
-[add your answer here]   
+All the three constructors will be called, Foxi() first, then Dog() and then Animal().
