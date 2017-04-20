@@ -8,35 +8,34 @@
 # ("cat", "CAT", "cat," "cat." are different words )
 
 import sys
-from collections import Counter
 
 class WordCounter():
     def __init__(self):
         self.args = sys.argv
         self.command = sys.argv[1:]
-        if len(self.args) == 1:
+        if len(self.args) == 0:
             print("python most_common_word.py [source]")
-        elif len(sys.argv) == 2 :
+        elif len(sys.argv) == 1 :
             print ("No source provided")
-        elif len(self.command) == 3 and self.command[0] == 'python':
-                self.read_write(self.command[1], self.command[2])
+        elif len(self.command) == 2 and self.command[0] == 'most_common_word.py':
+            self.most_common_word(self.command[0], self.command[1])
 
-    def MostCommonWord(self, program, source):
+    def most_common_word(self, program, source):
         try:
             source_file = open(source, mode='r')
             file_content = source_file.read()
-            source_file.close()
-            words_to_count = []
-            for w in file_content:
-                if w not in words_to_count:
-                    words_to_count.append(w)
-            for word in words_to_count:
-                count = 0
+            self.total = []
+            count = 0
+            for word in file_content:
                 if word == word:
                     count += 1
-            return count
+            self.total.sort()
+            self.total.reverse()
+            source_file.close()
+            a = self.total[0]
+            return a
         except FileNotFoundError:
             print('No such file was found')
 
-count = WordCounter()
-count.MostCommonWord("most_common_word.py", "filetoread.txt")
+count_that = WordCounter()
+count_that.most_common_word("most_common_word.py", "filetoread.txt")
